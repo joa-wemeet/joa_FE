@@ -1,0 +1,48 @@
+.card {
+    display: flex;
+    flex-Direction: column;
+    align-Items: center;
+    justify-Content: center;
+    background-Color: white;
+    border-Radius: 20px;
+    box-Shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+    height: 720px;
+    width: 720px;
+    padding: 30px;
+    margin: 20px;
+}
+.icon {
+    width: 150px; /* 원하는 너비 */
+    height: 150px; /* 원하는 높이 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 이미지가 크기를 초과하면 잘리도록 설정 */
+  }
+  
+  .icon img {
+    max-width: 100%; /* 이미지가 부모 크기를 초과하지 않도록 설정 */
+    max-height: 100%; /* 이미지가 부모 크기를 초과하지 않도록 설정 */
+    object-fit: contain; /* 이미지 비율 유지하며 크기 조정 */
+  }
+  
+
+.emoji {
+    font-Size: 60px;
+}
+.title {
+    font-Size: 100px;
+    font-Weight: bold;
+    color: #333;
+    margin-Bottom: 15px;
+}
+.description {
+    font-Size: 50px;
+    color: #666;
+    text-Align: center;
+}
+.link {
+    color: #ff5722;
+    font-Weight: bold;
+    cursor: pointer;
+}
