@@ -1,0 +1,66 @@
+.main-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .top-image {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .service-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .service-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 95%; /* 너비를 늘림 */
+    margin: 0 auto;
+  }
+  
+  .service-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* 상하 내용을 균등 분포 */
+    align-items: center;
+    height: 120px; /* 박스 높이를 증가 */
+    padding: 10px; /* 내부 패딩 추가 */
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* 박스가 그리드 셀 너비를 전부 차지하도록 */
+  }
+  
+  .service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .service-box span, .service-box .service-free {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    width: 100%; /* 텍스트가 박스 너비를 전부 사용하도록 */
+  }
+  
+  .service-divider {
+    width: 100%; /* 구분선 너비를 박스 너비에 맞춤 */
+    height: 1px;
+    background-color: #ccc;
+    margin: 4px 0;
+  }
+  
