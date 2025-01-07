@@ -6,9 +6,8 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('../src/assets/background.png');
-  height: 100vh; /* 전체 화면 높이 */
+  height: 100%;/* 전체 화면 높이 */
   width: 100%; /* 전체 화면 너비 */
-  background-image: url('../src/assets/background.png'); /* 이미지 경로 */
   background-size: contain; /* 비율 유지 + 이미지 전체 보이기 */
   background-position: center; /* 이미지를 중앙 정렬 */
   background-repeat: no-repeat; /* 이미지 반복 방지 */

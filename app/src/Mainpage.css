@@ -1,24 +1,20 @@
 .main-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: inline;
     width: 100%;
-    min-height: 100vh;
-    padding: 20px;
-    box-sizing: border-box;
+    height: 100%;
   }
   
   .top-image {
-    max-width: 80%;
-    height: auto;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 50%; 
+    object-fit: fill;
   }
   
   .service-title {
-    font-size: 24px;
+    font-size: 48px;
     color: #333;
     margin-bottom: 20px;
+    text-align: center;
   }
   
   .service-section {
@@ -37,7 +33,7 @@
     align-items: center;
     height: 120px; /* 박스 높이를 증가 */
     padding: 10px; /* 내부 패딩 추가 */
-    background-color: #f8f8f8;
+    background-color: #2e3d86;
     border: 1px solid #ccc;
     border-radius: 10px;
     cursor: pointer;
