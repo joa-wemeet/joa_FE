@@ -10,7 +10,7 @@ function MainPage() {
     <div className="container">
     <div className="main-page">
       <img src="/main/긴급전화통합.jpeg" alt="Emergency Numbers" className="top-image"/>
-      <h2 className="service-title" style={{ color: '#2e3d86' }}>발급을 원하시는 <span style={{ color: '#d94925' }}>
+      <h2 className="mainservice-title" style={{ color: '#2e3d86' }}>발급을 원하시는 <span style={{ color: '#d94925' }}>
       증명서를 선택</span>하세요</h2>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '15px', justifyContent: 'center' }}>
         {[
@@ -62,7 +62,8 @@ function MainPage() {
       </div>
 
       {/* Bottom Buttons */}
-      <div style={{ display: 'flex', justifyContent: 'space-around', gap: '20px', margintop: '20px'}}>
+      <div className= 'mainservicecontain'
+      style={{ display: 'flex', justifyContent: 'space-around', gap: '20px', margintop: '20px'}}>
         <button
           style={{
             backgroundColor: '#568a35',

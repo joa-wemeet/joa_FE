@@ -1,0 +1,168 @@
+/* 전체 페이지 스타일 */
+.main-page {
+    display:inline;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* 제목 스타일 */
+  .page13service-title {
+    font-size: 60px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* 입력 영역 스타일 */
+  .page13container2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* 화면 크기에 따라 줄바꿈 허용 */
+    justify-content: center; /* 중앙 정렬 */
+    align-items: flex-start;
+    gap: 20px;
+  }  
+  
+  .page13input-area {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: rgba(249, 249, 249, 0.426);
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+  }
+  .page13-input-box {
+    margin-left: 60px;
+    font-size: 60px;
+    border-radius: 5px;
+  }
+  
+  .page13input-keypad-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* 요소들을 수직으로 정렬 */
+    justify-content: center;
+    align-items: center;
+    max-width: 600px; /* 최대 너비 제한 */
+    gap: 20px;
+    margin-top: 12px;
+  }  
+  
+  /* 번호 표시 스타일 */
+  .page13number-display {
+    display: flex;
+    font-weight: bold;
+    color: #2e3d86;
+    padding: 20px 20px;
+    text-align: center;
+    border: 2px solid #bab1b1;
+    border-radius: 8px;
+    background-color: rgba(249, 249, 249, 0.8);
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    box-sizing: border-box; /* 패딩 포함 */
+    margin-top: -50px;
+    margin-left: 500px;
+
+  }
+  
+  .page13number-display h2 {
+    margin: 0;
+    font-size: 55px;
+  }
+  
+  /* 키패드 스타일 */
+  .page13keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3열 그리드 */
+    gap: 40px;
+    width: 100%;
+    margin-left: 280px;
+  }
+  
+  /* 키패드 버튼 스타일 */
+  .page13keypad-button {
+    width: 240px;
+    height: 200px;
+    border-radius: 20%;
+    border: none;
+    background-color: #e0e0e0;
+    font-size: 6em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .page13keypad-button2 {
+    width: 230px;
+    height: 190px;
+    border-radius: 20%;
+    border: none;
+    background-color: #e0e0e0;
+    font-size: 5.4em;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .page13keypad-button:hover {
+    background-color: #d9d9d9;
+    transform: scale(1.05);
+  }
+  
+  /* 버튼들 사이의 간격을 설정하는 스타일 */
+  .page13button-container {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  /* 홈, 이전, 제출 버튼 스타일 */
+  .page13home-button,
+  .page13previous-button,
+  .page13submit-button {
+    width: 220px;
+    height: 150px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #d6231d;
+    color: white;
+    font-size: 1.4em;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .page13submit-button {
+    background-color: #2e3d86;
+    margin-right: 150px;
+  }
+  
+  .page13home-button {
+    margin-left: 140px;
+  }
+  
+  .page13home-button .page13homebutton-icon,
+  .page13previous-button .page13previousbutton-icon,
+  .page13submit-button .page13button-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
