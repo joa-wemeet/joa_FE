@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './page6.css';
+import { useNavigate } from 'react-router-dom'; // useNavigate 훅 임포트
 
 function Page6() {
   const [idNumber, setIdNumber] = useState('');
+  const navigate = useNavigate(); // useNavigate 훅 사용
 
   const handleNumberClick = (number) => {
     setIdNumber((prev) => prev + number); // Append the clicked number
@@ -12,11 +14,19 @@ function Page6() {
     setIdNumber(''); // Clear the idNumber
   };
 
+  const handleHomeClick = () => {
+    navigate('/'); // '처음화면' 클릭 시 /로 이동
+  };
+
+  const handlePreviousClick = () => {
+    navigate('/idnumber'); // '이전화면' 클릭 시 /idnumber로 이동
+  };
+
   const handleSubmitClick = () => {
     if (idNumber) {
-      alert(`입력된 숫자: ${idNumber}`);
+      navigate('/page7'); // 발급부수를 입력하고 '확인' 클릭 시 /page7로 이동
     } else {
-      alert('숫자를 입력하세요.');
+      alert('발급부수를 입력하세요.');
     }
   };
 
@@ -31,22 +41,29 @@ function Page6() {
         <div className="container2">
           <div className="page6input-area">
             <div className="page6-input-box">
-            <p><span style={{ color: '#d94925' }}>신청증명서</span><br />
+              <p>
+                <span style={{ color: '#d94925' }}>신청증명서</span>
+                <br />
                 <span style={{ color: '#2e3d86' }}> : 주민등록표(초본)</span>
-            </p>
-            <p><span style={{ color: '#d94925' }}>수수료</span><br />
+              </p>
+              <p>
+                <span style={{ color: '#d94925' }}>수수료</span>
+                <br />
                 <span style={{ color: '#2e3d86' }}> : 무료</span>
-            </p>
-            <p><span style={{ color: '#d94925' }}>현재신청항목</span><br />
+              </p>
+              <p>
+                <span style={{ color: '#d94925' }}>현재신청항목</span>
+                <br />
                 <span style={{ color: '#2e3d86' }}> : 주민등록표(초본)</span>
-            </p>
+              </p>
             </div>
           </div>
 
-          
           <div className="page6input-keypad-container">
             {/* Display Box for Numbers */}
-            <div className="page6number-display"><h2>발급부수 : {idNumber || '--'}</h2></div>
+            <div className="page6number-display">
+              <h2>발급부수 : {idNumber || '--'}</h2>
+            </div>
 
             {/* Keypad */}
             <div className="page6keypad">
@@ -68,20 +85,20 @@ function Page6() {
 
         {/* Buttons */}
         <div className="page6button-container">
-  <button className="page6home-button" onClick={handleSubmitClick}>
-    <img src="/main/home.png" alt="home icon" className="page6homebutton-icon" />
-    처음화면
-  </button>
+          <button className="page6home-button" onClick={handleHomeClick}>
+            <img src="/main/home.png" alt="home icon" className="page6homebutton-icon" />
+            처음화면
+          </button>
 
-  <button className="page6previous-button" onClick={handleSubmitClick}>
-    <img src="/main/previous.png" alt="previous icon" className="page6previousbutton-icon" />
-    이전화면
-  </button>
+          <button className="page6previous-button" onClick={handlePreviousClick}>
+            <img src="/main/previous.png" alt="previous icon" className="page6previousbutton-icon" />
+            이전화면
+          </button>
 
-  <button className="page6submit-button" onClick={handleSubmitClick}>
-    <img src="/main/check-symbol.png" alt="submit icon" className="page6button-icon" />
-    확인
-  </button>
+          <button className="page6submit-button" onClick={handleSubmitClick}>
+            <img src="/main/check-symbol.png" alt="submit icon" className="page6button-icon" />
+            확인
+          </button>
         </div>
       </div>
     </div>

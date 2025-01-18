@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import './idnumber.css';
+import { useNavigate } from 'react-router-dom'; // useNavigate 훅 임포트
 
 function Idnumber() {
   const [idNumber, setIdNumber] = useState('');
+  const navigate = useNavigate(); // useNavigate 훅 사용
 
   const handleNumberClick = (number) => {
     if (idNumber.length < 13) {
@@ -20,10 +22,18 @@ function Idnumber() {
 
   const handleSubmitClick = () => {
     if (idNumber.length === 13) {
-      alert(`입력된 주민등록번호: ${idNumber}`);
+      navigate('/page6'); // 주민번호가 모두 입력되면 /page6으로 이동
     } else {
       alert('주민등록번호 13자리를 입력해주세요.');
     }
+  };
+
+  const handleHomeClick = () => {
+    navigate('/'); // '처음화면' 클릭 시 /로 이동
+  };
+
+  const handlePreviousClick = () => {
+    navigate('/page4'); // '이전화면' 클릭 시 /page4로 이동
   };
 
   const displayChars = Array(13).fill('-');
@@ -100,7 +110,7 @@ function Idnumber() {
 
         {/* 버튼 컨테이너 */}
         <div className="idnumberbutton-container">
-          <button className="idnumberhome-button" onClick={handleSubmitClick}>
+          <button className="idnumberhome-button" onClick={handleHomeClick}>
             <img
               src="/main/home.png"
               alt="home icon"
@@ -109,7 +119,7 @@ function Idnumber() {
             처음화면
           </button>
 
-          <button className="idnumberprevious-button" onClick={handleSubmitClick}>
+          <button className="idnumberprevious-button" onClick={handlePreviousClick}>
             <img
               src="/main/previous.png"
               alt="previous icon"

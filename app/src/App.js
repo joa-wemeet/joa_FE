@@ -1,12 +1,18 @@
 import React from 'react';
-import './main/app.css'; 
+import './main/app.css';
+import { useNavigate } from 'react-router-dom'; // useNavigate 훅 임포트
 
 function App() {
+  const navigate = useNavigate(); // useNavigate 훅 사용
+
+  const handleCardClick = () => {
+    navigate('/mainpage'); // /mainpage로 이동
+  };
+
   return (
     <div className="container">
       {/* 시선 추적 */}
-      
-      <div className="card">
+      <div className="card" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
         <h2 className="title">시선 추적</h2>
         <div className="icon">
           <img src="/main/eye.png" alt="Sample" />
@@ -17,12 +23,11 @@ function App() {
       </div>
 
       {/* 터치 모드 */}
-      <div className="card">
-      <h2 className="title">터치 모드</h2>
+      <div className="card" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
+        <h2 className="title">터치 모드</h2>
         <div className="icon">
           <img src="/main/tap.png" alt="Sample" />
         </div>
-        
         <p className="description">
           터치모드를 이용하시려면 <span className="link">여기</span>를 클릭해 주세요
         </p>
@@ -31,4 +36,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

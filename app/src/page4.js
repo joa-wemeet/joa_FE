@@ -1,12 +1,21 @@
 import React from 'react';
 import './page4.css'; // 스타일 시트 임포트
+import { useNavigate } from 'react-router-dom'; // useNavigate 훅 임포트
 
 function Page4() {
+  const navigate = useNavigate(); // useNavigate 훅 사용
+
   const handleServiceClick = (service) => {
-    console.log(`${service} clicked`); // 실제 기능을 추가할 위치
+    if (service === '주민등록표(초본)') {
+      navigate('/idnumber'); // '주민등록표(초본)' 클릭 시 /idnumber으로 이동
+    } else {
+      console.log(`${service} clicked`);
+    }
   };
 
-  
+  const handlePreviousClick = () => {
+    navigate('/mainpage'); // '이전화면' 클릭 시 /mainpage로 이동
+  };
 
   return (
     <div className="container">
@@ -55,13 +64,13 @@ function Page4() {
             </button>
           ))}
         </div>
-        <button className='previousbutton'>
-        <img src="/main/previous.png" alt="previous icon" className="previousbutton-icon" />
-        이전화면
+        <button
+          className="previousbutton"
+          onClick={handlePreviousClick} // '이전화면' 클릭 시 이동
+        >
+          <img src="/main/previous.png" alt="previous icon" className="previousbutton-icon" />
+          이전화면
         </button>
-
-
-
       </div>
     </div>
   );
