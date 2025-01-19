@@ -5,14 +5,18 @@ import { useNavigate } from 'react-router-dom'; // useNavigate 훅 임포트
 function App() {
   const navigate = useNavigate(); // useNavigate 훅 사용
 
-  const handleCardClick = () => {
+  const eyeTrackingModeClick = () => {
     navigate('/mainpage'); // /mainpage로 이동
+  };
+
+  const touchModeClick = () => {
+    navigate('/page10'); // /page10으로 이동
   };
 
   return (
     <div className="container">
       {/* 시선 추적 */}
-      <div className="card" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
+      <div className="card" onClick={eyeTrackingModeClick} style={{ cursor: 'pointer' }}>
         <h2 className="title">시선 추적</h2>
         <div className="icon">
           <img src="/main/eye.png" alt="Sample" />
@@ -23,7 +27,7 @@ function App() {
       </div>
 
       {/* 터치 모드 */}
-      <div className="card" onClick={handleCardClick} style={{ cursor: 'pointer' }}>
+      <div className="card" onClick={touchModeClick} style={{ cursor: 'pointer' }}>
         <h2 className="title">터치 모드</h2>
         <div className="icon">
           <img src="/main/tap.png" alt="Sample" />
